@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -60,7 +61,7 @@ export default function Home() {
         >
           Powered by{' '}
           <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            <Link href="/about">Tom</Link>
           </span>
         </a>
       </footer>
