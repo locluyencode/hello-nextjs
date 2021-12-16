@@ -52,7 +52,7 @@ function About() {
     };
   }, []);
 
-  const [size, setSize] = useState(0);
+  const [size, setSize] = useState();
   useEffect(() => {
     const handleResize = () => {
       setSize(window.innerWidth);
@@ -64,7 +64,7 @@ function About() {
   }, [size]);
   return (
     <div style={{ padding: 30 }}>
-      <p>please resize...{size}</p>
+      <p>please resize...{size ?? ""}</p>
       <button onClick={handleShow}>Show/hide about</button>
       {show ? <div>My name is Tom</div> : ""}
       <button
